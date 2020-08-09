@@ -18,10 +18,14 @@ use Abraham\TwitterOAuth\TwitterOAuth;
  * Runs on the `plugins_loaded` hook.
  */
 function bootstrap() {
-	if ( ! function_exists( 'register_extended_post_type' ) ) {
-		// Extended Post Types plugin is not enabled. Panic.
-		exit;
+	if (
+		! function_exists( 'register_extended_post_type' ) ||
+		! class_exists( '\\Abraham\\TwitterOAuth\\TwitterOAuth' )
+	) {
+		// Dependencies unavailable, do nothing.
+		return;
 	}
+
 	add_action( 'init', __NAMESPACE__ . '\\register_cpt' );
 	add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\enqueue_admin_assets' );
 	add_filter( 'wp_insert_post_empty_content', __NAMESPACE__ . '\\post_empty_content', 10, 2 );
