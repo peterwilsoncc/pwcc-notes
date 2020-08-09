@@ -1,2 +1,2 @@
-# pwcc-multi-domain
-Multi-domain functionality for peterwilson.cc
+# pwcc-notes
+Indie-web functionality for peterwilson.cc
