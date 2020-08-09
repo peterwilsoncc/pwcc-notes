@@ -1,0 +1,24 @@
+{
+	"name": "peterwilsoncc/pwcc-notes",
+	"description": "Indie-web plugin for my personal website.",
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Peter Wilson",
+			"email": "wilson@peterwilson.cc"
+		}
+	],
+	"type": "wordpress-muplugin",
+	"config": {
+		"preferred-install": "dist",
+		"sort-packages": true
+	},
+	"require": {
+		"abraham/twitteroauth": "^1.1",
+		"composer/installers": "^1.9",
+		"johnbillion/extended-cpts": "^4.4"
+	},
+	"require-dev": {
+		"humanmade/coding-standards": "^1.0"
+	}
+}
