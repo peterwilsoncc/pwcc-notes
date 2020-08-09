@@ -111,6 +111,8 @@ function register_cpt() {
  * Enqueue assets for use in the admin.
  *
  * Runs on the `admin_enqueue_scripts` hook.
+ *
+ * @param string $hook_name The current admin page.
  */
 function enqueue_admin_assets( $hook_name ) {
 	wp_register_script(

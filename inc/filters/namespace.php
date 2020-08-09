@@ -42,7 +42,7 @@ function filter_the_title( $title, $post_id ) {
 	if ( $title === '' ) {
 		$title .= 'Noted ';
 
-		// Date it
+		// Date it.
 		$title .= get_the_date( get_option( 'date_format' ), $post->ID );
 	}
 
