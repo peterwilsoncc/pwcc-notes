@@ -20,6 +20,16 @@
  */
 namespace PWCC\Notes;
 
+/*
+ * Load vendor files if set up in this directory.
+ *
+ * If not installed within this directory then it is assumed the parent
+ * project is responsible for doing so from their vendor directory.
+ */
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	require_once __DIR__ . '/vendor/autoload.php';
+}
+
 require_once __DIR__ . '/inc/namespace.php';
 require_once __DIR__ . '/inc/filters/namespace.php';
 require_once __DIR__ . '/inc/metaboxes/namespace.php';
