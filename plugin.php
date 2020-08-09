@@ -29,6 +29,7 @@ namespace PWCC\Notes;
  */
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require_once __DIR__ . '/vendor/autoload.php';
+	require_once __DIR__ . '/vendor/humanmade/custom-meta-boxes/custom-meta-boxes.php';
 }
 
 require_once __DIR__ . '/inc/namespace.php';
